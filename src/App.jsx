@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home';
-import Betbar from './components/Betbar';
+import Betbar from './components/Betbar/Betbar';
 
 function App() {
   return (
