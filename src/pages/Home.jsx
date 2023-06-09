@@ -1,7 +1,8 @@
 import React from 'react';
+import Mlb from './Mlb';
 
 const Home = () => {
-  return <div>Home</div>;
+  return <Mlb />;
 };
 
 export default Home;

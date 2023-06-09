@@ -1,11 +1,12 @@
 @import '../../global-styles/variables';
 
 .navbar {
-  background: $dark;
+  background-color: $black;
   position: sticky;
   top: 0;
   overflow: hidden;
   z-index: 1;
+  position: relative;
 }
 
 .navbar__top {
@@ -37,6 +38,7 @@
 .navbar__btn--login:hover {
   background-color: $secondary-color;
   color: $primary-color;
+  border-color: $secondary-color;
 }
 
 .navbar__btn--join {
@@ -72,7 +74,12 @@
 
 .navbar__link {
   padding: 0 0.25rem;
-  color: white;
+  color: $secondary-color;
   display: flex;
   align-items: center;
+  transition: color 0.3s;
+}
+
+.navbar__link:hover {
+  color: $primary-color;
 }

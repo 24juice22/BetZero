@@ -1,0 +1,58 @@
+@import '../../global-styles/variables.scss';
+
+.betbar {
+  bottom: 0;
+  position: fixed;
+  background-color: $black;
+  width: 100%;
+}
+
+.betbar__list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.betbar__list-item {
+  position: relative;
+  color: $secondary-color;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.betbar__list-item:hover {
+  background-color: $primary-color;
+}
+
+.betbar__link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $secondary-color;
+  width: 100%;
+  padding: 2.25rem;
+  font-size: 1.6rem;
+}
+
+.betslip__count {
+  position: absolute;
+  top: 3%;
+  left: 10%;
+  text-align: center;
+  font-weight: 500;
+  color: $secondary-color;
+  background-color: $primary-color;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 50%;
+  padding: 0.15rem;
+  //   visibility: hidden;
+  min-width: 2.139rem;
+}
+
+.betslip__link:hover > .betslip__count {
+  color: $primary-color;
+  background-color: $secondary-color;
+}
