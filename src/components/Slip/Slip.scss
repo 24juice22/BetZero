@@ -1,0 +1,41 @@
+@import '../../global-styles/variables';
+
+.slip {
+  border-color: $secondary-color;
+  padding: 2rem 0 1.5rem;
+  font-size: 1.5rem;
+}
+
+.slip__btn--exit {
+  font-size: 1.2rem;
+  padding: 0 0.3rem;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+.slip__bet-info {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  color: red;
+}
+
+.slip__line-numbers {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.slip__price {
+  color: $primary-color;
+}
+
+.slip__line-type {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.slip__matchup-info {
+  font-size: 1.3rem;
+  padding: 1rem 0;
+}
