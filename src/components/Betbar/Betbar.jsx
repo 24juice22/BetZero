@@ -6,6 +6,10 @@ import './Betbar.scss';
 const Betbar = () => {
   const { betbarActive } = useSelector((state) => state);
 
+  const slipCountStyles = {
+    visibility: betbarActive.betList.length ? 'visible' : 'hidden',
+  };
+
   return (
     <nav className='betbar'>
       <div className='container--widest'>
@@ -22,9 +26,9 @@ const Betbar = () => {
           </li>
 
           <li className='betbar__list-item'>
-            <Link className='betbar__link betslip__link' to='/'>
-              <p className='betslip__count'>
-                {betbarActive.betList.length ? betbarActive.betList.length : 0}
+            <Link className='betbar__link betslip__link' to='/betslip'>
+              <p className='betslip__count' style={slipCountStyles}>
+                {betbarActive.betList.length}
               </p>
               <p>Betslip</p>
             </Link>

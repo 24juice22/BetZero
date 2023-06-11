@@ -1,7 +1,7 @@
 import React from 'react';
 import './Box.scss';
 import BoxTeam from './BoxTeam';
-import GameDate from './GameDate';
+import GameDate from '../GameDate';
 
 const Box = ({ matchup }) => {
   return (
