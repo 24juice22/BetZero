@@ -10,3 +10,36 @@
   position: relative;
   font-size: 1.3rem;
 }
+
+.box__team {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.box__team-name {
+  margin: 0 auto 0 0.3rem;
+  font-weight: 500;
+}
+
+.box__lines {
+  display: flex;
+  justify-content: center;
+  min-width: 60%;
+  color: blue;
+}
+
+.line {
+  border: 2px solid lightblue;
+  border-radius: 0.8rem;
+  width: 32%;
+  height: 4rem;
+  padding: 0.2rem;
+  margin: 0 0.3rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

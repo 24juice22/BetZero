@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import './Betbar.scss';
 
 const Betbar = () => {
+  const { betbarActive } = useSelector((state) => state);
+
+  const slipCountStyles = {
+    visibility: betbarActive.betList.length ? 'visible' : 'hidden',
+  };
+
   return (
     <nav className='betbar'>
       <div className='container--widest'>
@@ -19,8 +26,10 @@ const Betbar = () => {
           </li>
 
           <li className='betbar__list-item'>
-            <Link className='betbar__link betslip__link' to='/'>
-              <p className='betslip__count'>2</p>
+            <Link className='betbar__link betslip__link' to='/betslip'>
+              <p className='betslip__count' style={slipCountStyles}>
+                {betbarActive.betList.length}
+              </p>
               <p>Betslip</p>
             </Link>
           </li>

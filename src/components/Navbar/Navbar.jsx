@@ -12,8 +12,10 @@ const Navbar = () => {
       <div className='container'>
         <div className='navbar__top'>
           <Link to='/' className='navbar__brand'>
-            <h3 className='navbar__logo'>BZ</h3>
-            <span>BetZer0</span>
+            <h3 className='navbar__logo'>
+              B<span>Z</span>
+            </h3>
+            {/* <span>BetZer0</span> */}
           </Link>
           <div className='navbar__buttons'>
             <button className='btn navbar__btn--login'>Login</button>

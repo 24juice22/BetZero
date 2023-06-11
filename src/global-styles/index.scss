@@ -111,6 +111,18 @@ h3 {
   color: $primary-color;
 }
 
+.btn--exit {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  border-color: $primary-color;
+  background-color: transparent;
+  border-radius: 0.3rem;
+  font-size: 1.5rem;
+  color: $primary-color;
+  padding: 0 0.45rem;
+}
+
 /* Lists*/
 .list {
   list-style-type: none;
