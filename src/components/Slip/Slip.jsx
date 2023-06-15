@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { update } from '../../redux/betbarActive';
 import GameDate from '../GameDate';
 import './Slip.scss';
+import SlipForm from './SlipForm';
 
 const Slip = ({ matchup }) => {
   const dispatch = useDispatch();
@@ -31,7 +32,7 @@ const Slip = ({ matchup }) => {
           <p className='slip__matchup'>{matchup.matchupInfo}</p>
           <GameDate matchup={matchup.betDate} />
         </div>
-        {/* <SlipForm price={matchup.price} id={matchup.id} /> */}
+        <SlipForm price={matchup.price} id={matchup.id} />
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ const Betslip = () => {
   const { betbarActive } = useSelector((state) => state);
   const betList = betbarActive.betList;
 
+  console.log('line 9 betslip:', betList);
   const slipElements = betList.map((matchup) => (
     <Slip key={matchup.id} matchup={matchup} />
   ));
@@ -20,12 +21,13 @@ const Betslip = () => {
       )}
       {!betList.length && <h3 className='betslip__logo'>CAM</h3>}
       {slipElements}
-      {betList.length && (
+      {/* {betList.length && (
         <button className='btn betslip__button'>Login to Bet</button>
-      )}
+      )} */}
       {betbarActive.length && (
         <button className='btn betslip__button'>Bet</button>
       )}
+      <button className='btn betslip__button'>Bet</button>
     </div>
   );
 };
