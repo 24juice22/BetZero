@@ -18,9 +18,20 @@ export const betbarActiveSlice = createSlice({
         state.betList.push(action.payload);
       }
     },
+    addWager: (state, action) => {
+      state.betList = state.betList.map((value) => {
+        return value.id === action.payload.id
+          ? {
+              ...value,
+              betAmount: action.payload.betAmount,
+              winAmount: action.payload.winAmount,
+            }
+          : value;
+      });
+    },
   },
 });
 
-export const { update } = betbarActiveSlice.actions;
+export const { update, addWager } = betbarActiveSlice.actions;
 
 export default betbarActiveSlice.reducer;
