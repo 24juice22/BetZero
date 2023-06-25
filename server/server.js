@@ -1,17 +1,14 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import path from 'path';
+import apiRouter from './routes/apiRouter.js';
 
 const app = express();
 const PORT = 9000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/api/', (_, res) => {
-  let placeholderData = 65;
-  console.log('inside server GETapi', placeholderData);
-  res.status(200).json(placeholderData);
-});
+app.use('/api', apiRouter);
 
 // Handle invalid endpoint
 app.use((req, res) => {
