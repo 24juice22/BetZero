@@ -1,9 +1,30 @@
 const apiController = {};
 
-apiController.getNflData = (req, res, next) => {
-  console.log('in apiController NFL');
+apiController.getData = (req, res, next) => {
+  let sport;
+  switch (req.url) {
+    case '/mlb':
+      sport = 'baseball_mlb';
+      break;
+    case '/nfl':
+      sport = 'americanfootball_nfl';
+      break;
+    case 'nba':
+      sport = 'basketball_nba';
+      break;
+    case 'nhl':
+      sport = 'icehockey_nhl';
+      break;
+    case 'ncaaf':
+      sport = 'americanfootball_ncaaf';
+      break;
+    case 'ncaab':
+      sport = 'abasketball_ncaab';
+      break;
+  }
+
   fetch(
-    'https://api.the-odds-api.com/v4/sports/baseball_mlb/odds/?regions=us&markets=spreads,totals,h2h&oddsFormat=american&apiKey=7e633aea1cc34e3ceec88cb2bb5d135d'
+    `https://api.the-odds-api.com/v4/sports/${sport}/odds/?regions=us&markets=spreads,totals,h2h&oddsFormat=american&apiKey=7e633aea1cc34e3ceec88cb2bb5d135d`
   )
     .then((res) => res.json())
     .then((data) => {
