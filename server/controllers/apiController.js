@@ -1,6 +1,7 @@
 const apiController = {};
 
 apiController.getData = (req, res, next) => {
+  console.log(req.url);
   let sport;
   switch (req.url) {
     case '/mlb':
@@ -9,16 +10,16 @@ apiController.getData = (req, res, next) => {
     case '/nfl':
       sport = 'americanfootball_nfl';
       break;
-    case 'nba':
+    case '/nba':
       sport = 'basketball_nba';
       break;
-    case 'nhl':
+    case '/nhl':
       sport = 'icehockey_nhl';
       break;
-    case 'ncaaf':
+    case '/ncaaf':
       sport = 'americanfootball_ncaaf';
       break;
-    case 'ncaab':
+    case '/ncaab':
       sport = 'abasketball_ncaab';
       break;
   }
@@ -50,12 +51,12 @@ function cleanData(data) {
       indexMoneyline = betMarkets.findIndex((index) => index.key === 'h2h');
     }
 
-    //Find specific team index for each outcome
+    //  Find specific team index for each outcome
     let indexOutcome = (index, team) => {
       return betMarkets[index].outcomes.findIndex((item) => item.name === team);
     };
 
-    //Return the final line value if it exists or empty string
+    //  Return the final line value if it exists or empty string
     const line = (index, team, priceOrPoint) => {
       return index === -1
         ? ''
