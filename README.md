@@ -14,8 +14,6 @@ Use the navigation menu to choose which sport you would like to bet on, unless y
 
 ### `Wager Types`
 
-![Sportsbook Screenshot](./src/images/readMe/wager-type.png)
-
 For each game, you will have at most 3 wager types that you can make. (Note: some wager types may not have data provided yet from the api and will appear blank for the time being). The wager types are as follows:
 
 - Spread
@@ -53,8 +51,6 @@ To make a wager, simply click on the box that represents the bet you would like 
 So what is the Betslip?
 
 > **The Betslip is the page (on small screens) or right section of the page (on larger screens) where all of your prospective bets (also known as slips) are stored and await for you to input how much you wish to wager. See the mobile screenshot below:**
-
-![Betslip Screenshot](./src/images/readMe/betslip.png)
 
 In the above betslip there are 2 slips. The top one represents a Moneyline bet on the Washington Commanders at a price of +130. In this slip, the user entered $120 into the form input as the bet amount. Below that amount it says $156 in blue and that is what will be won if they make the bet. The second slip represents a Total bet on the Over 44.5 points and has a price of -105. The user entered a wager of $200 and could possibly win $190.48.
 
