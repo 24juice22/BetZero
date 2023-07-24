@@ -7,6 +7,15 @@ import nhl from '../../assets/nhl/nhl.png';
 import './Navbar.scss';
 
 const Navbar = () => {
+  function handleClick() {
+    fetch('/api/nfl')
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => console.log(`error with ${err}`));
+  }
+
   return (
     <nav className='navbar'>
       <div className='container'>
@@ -29,7 +38,7 @@ const Navbar = () => {
         <div className='container--widest'>
           <ul className='list navbar__list'>
             <li className='navbar__list-item'>
-              <Link className='navbar__link' to='/'>
+              <Link className='navbar__link' to='/mlb'>
                 <img
                   className='navbar__icon navbar__icon--baseball'
                   src={mlb}
@@ -39,7 +48,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className='navbar__list-item'>
-              <Link className='navbar__link' to='/'>
+              <Link className='navbar__link' to='/' onClick={handleClick}>
                 <img
                   className='navbar__icon'
                   src={nfl}

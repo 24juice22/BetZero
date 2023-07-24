@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import useFetch from '../components/useFetch';
+import dummyData from '../data/dummyData';
+import Box from '../components/Box/Box';
 
 const Mlb = () => {
-  const { data: baseball } = useFetch(
-    'https://api.the-odds-api.com/v4/sports/baseball_mlb/odds/?regions=us&markets=spreads,totals,h2h&oddsFormat=american&apiKey=7e633aea1cc34e3ceec88cb2bb5d135d'
-  );
+  // const [baseball, setBaseball] = useState(null);
+
+  const baseball = dummyData;
+  // useEffect(() => {
+  //   fetch('/api/mlb')
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //       setBaseball(data);
+  //     });
+  // }, []);
 
   if (baseball)
     return (
@@ -12,11 +21,7 @@ const Mlb = () => {
         {baseball.length === 0 ? (
           <p>There are currently no MLB odds</p>
         ) : (
-          baseball.map((matchup) => (
-            <div
-              key={matchup.id}
-            >{`${matchup.away_team} @ ${matchup.home_team}`}</div>
-          ))
+          baseball.map((matchup) => <Box key={matchup.id} matchup={matchup} />)
         )}
       </div>
     );
