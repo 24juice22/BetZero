@@ -17,8 +17,6 @@ const Lines = ({
   //   const { betbarActive } = useSelector((state) => state);
   const dispatch = useDispatch();
 
-  console.log(isClicked);
-
   const styles = {
     backgroundColor: isClicked ? `rgb(252, 1, 193)` : 'white',
     borderColor: isClicked ? 'cyan' : 'lightblue',
@@ -38,7 +36,7 @@ const Lines = ({
     team: team,
     indexType: indexType,
     matchupInfo: matchupInfo,
-    betDate: { commence_time: new Date() },
+    // betDate: { commence_time: new Date() },
   };
 
   return (
