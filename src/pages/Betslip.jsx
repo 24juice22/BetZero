@@ -24,10 +24,10 @@ const Betslip = () => {
       )}
       {!betList.length && <h3 className='betslip__logo'>CAM</h3>}
       {slipElements}
-      {/* {betList.length && (
+      {betList.length > 0 && (
         <button className='btn betslip__button'>Login to Bet</button>
-      )} */}
-      {betbarActive.betList.length && (
+      )}
+      {betList.length > 0 && (
         <button
           className='btn betslip__button'
           onClick={() => dispatch(update(true))}
